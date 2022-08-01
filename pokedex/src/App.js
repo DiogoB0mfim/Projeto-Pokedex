@@ -1,11 +1,11 @@
-
+import Router from "./router/Router";
+import GlobalState from "./global/GlobalState"
 
 const App = () => {
   return (
-    <div>
-      <h1>teste</h1>
-      <h2>Ainda é teste</h2>
-    </div>
+      <GlobalState>
+      <Router/>
+      </GlobalState>
   )
 }
 export default App;
