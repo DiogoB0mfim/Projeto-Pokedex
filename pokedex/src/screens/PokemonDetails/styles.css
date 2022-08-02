@@ -34,8 +34,6 @@ div .progress {
 }
 
 progress {
-    display:block;
-    -webkit-appearance: none;
     height: 5px;
     border-radius: 15px;
 }
