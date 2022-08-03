@@ -1,0 +1,59 @@
+/*Estilização header fixo */
+div .fixed {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    gap: 10px;
+    padding: 15px;
+    margin-left: 20px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+div .fixed img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+/*Estilização header scrollado*/
+div .scrolled {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    gap: 10px;
+    padding: 15px;
+    margin-left: 20px;
+    background-color: rgb(236, 235, 235);
+    border-bottom: 1px solid rgb(212, 212, 212);
+    z-index: 10000;
+}
+
+div .scrolled img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+/*Estilização midia social*/
+div .social-midia {
+    display: flex;
+    margin-right: 20px;
+    width: 90vw;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+}
+
+div .social-midia img {
+    width: 35px;
+    height: 35px;
+    transition: 0.5s;
+}
+
+div .social-midia img:hover {
+    width: 40px;
+    height: 40px;
+}
+
