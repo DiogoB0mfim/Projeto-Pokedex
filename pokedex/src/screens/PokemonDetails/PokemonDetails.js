@@ -9,13 +9,13 @@ const PokemonDetails = () => {
     const navigate = useNavigate()
     const {name} = useParams()
     const [selectedPokemon, setSelectedPokemon] = useState({})
-    
+
     useEffect(() => {selectedPokemonDetails()} ,[])
     
     console.log(selectedPokemon)
     const selectedPokemonDetails = () => {
         axios
-            .get(`${BASE_URL}/pokemon/${ name }`)
+            .get(`${BASE_URL}/pokemon/${name}`)
             .then((response) => {
                 setSelectedPokemon(response.data)
             })
@@ -26,22 +26,20 @@ const PokemonDetails = () => {
 
     const renderPokemonStats = selectedPokemon.stats && selectedPokemon.stats.map((stat) => {
         return <div className='progress' key={stat.stat.name}>
-                    <p>{stat.stat.name}</p>
-                
-                    <progress value={stat.base_stat} max="150">teste</progress> 
-                    
+                    <p>{stat.stat.name[0].toUpperCase() + stat.stat.name.substring(1)}</p>
+                    <progress value={stat.base_stat} max="150">teste</progress>
                 </div>
     })
     
     const renderPokemonMoves = selectedPokemon.abilities && selectedPokemon.abilities.map((abilities, index) => {
          if (index < 1) {  
-            return <p key={index}>{abilities.ability.name}</p>
+            return <span key={index}>{abilities.ability.name[0].toUpperCase() + abilities.ability.name.substring(1)}</span>
         }}
     )
 
     const renderPokemonType = selectedPokemon.types && selectedPokemon.types.map((type, index) => {
-        return <div key={index}>
-                <p>{type.type.name}</p>
+        return <div id='type-bar' key={index} className={type.type.name}>
+                    <p>{type.type.name[0].toUpperCase() + type.type.name.substring(1)}</p>
                </div>
     })
     
@@ -57,42 +55,42 @@ const PokemonDetails = () => {
             <button onClick={() => deleteLocalPokemon("/pokedex")}>Voltar para a pokedex</button>
             
             <div className='container-details'>
-                <div className='pokemon-splash'>
-                    {selectedPokemon && selectedPokemon.sprites && (
-                        <div>
-                            <img src={selectedPokemon.sprites.versions["generation-v"]["black-white"].animated.front_default} alt="pokemon de frente"/>
-                            <img src={selectedPokemon.sprites.versions["generation-v"]["black-white"].animated.back_default} alt="pokemon de costas"/>
-                        </div>   
-                    )}
-                </div>
-                
-                <h2>{name}</h2>
-                
-                <div className="pokemon-type">
-                    {renderPokemonType}
-                </div>
-                
-                <div className="pokemon-infos">
-                    <div>
-                        <p>Height</p>
-                        {selectedPokemon.height}m
+                <div className="container-pokemon">
+                    <div className='pokemon-splash'>
+                        {selectedPokemon && selectedPokemon.sprites && (
+                            <img src={selectedPokemon.sprites.other['official-artwork'].front_default} alt="pokemon de frente"/>
+                        )}
                     </div>
                     
-
-                    <div>
-                        <p>Weight</p>
-                        {selectedPokemon.weight}kg
+                    <h2>{name[0].toUpperCase() + name.substring(1)}</h2>
+                    
+                    <div className="pokemon-type">
+                        {renderPokemonType}
                     </div>
                     
-                    <div>
-                        <p>Principal Ability</p>
-                        {renderPokemonMoves} 
+                    <div className="pokemon-infos">
+                        <div className="info">
+                            <p>Height</p>
+                            {selectedPokemon.height / 10}m
+                        </div>
+                        
+
+                        <div className="info">
+                            <p>Weight</p>
+                            {selectedPokemon.weight / 10}kg
+                        </div>
+                        
+                        <div className="info">
+                            <p>Ability</p>
+                            {renderPokemonMoves}
+                        </div>
                     </div>
+                    {renderPokemonStats}
                 </div>
 
                 
                 
-                {renderPokemonStats}
+                
                 
                 
                 

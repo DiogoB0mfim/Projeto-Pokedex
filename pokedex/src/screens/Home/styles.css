@@ -1,0 +1,46 @@
+/*Estilização Container de pokemons*/
+div .container-pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: center;
+}
+
+/*Estilização Card de pokemons*/
+div #card-types {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+div .card-pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 0 1px 1px rgb(232, 232, 233);
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    height: 280px;
+}
+
+div .card-pokemon img{
+    width: 150px;
+    height: 150px;
+    transition: 0.5s;
+}
+
+div .normalPoke img:hover{
+    margin-top: -70px;
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+}
+
+div .greyPoke img{
+    filter: grayscale(1);
+}
+
+
+

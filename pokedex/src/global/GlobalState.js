@@ -2,15 +2,37 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../constants/url";
 import GlobalStateContext from "./GlobalStateContext";
+import { toast } from "react-toastify";
 
 const GlobalState = (props) => {
   const [pokemonNames, setPokemonNames] = useState([]);
   const [pokemons, setPokemons] = useState([]);
   const [pokedex, setPokedex] = useState([]);
-  const [qtdPokemons, setQtdPokemons] = useState(20);
+  const [qtdPokemons, setQtdPokemons] = useState(25);
 
   useEffect(() => {getPokemonNames()}, [qtdPokemons]);
   useEffect(() => {getPokemonDetails()}, [pokemonNames]);
+
+  // Função para setar alert 
+  const alertSuccess = (message) => {
+    toast.success(`${message}`, {
+        position: "top-right",
+        className: "success-alert",
+        autoClose: 2000,
+        closeOnClick: true,
+        draggable: true,
+    })
+}
+
+const alertError = (message) => {
+    toast.error(`${message}`, {
+        position: "top-right",
+        className: "error-alert",
+        autoClose: 2000,
+        closeOnClick: true,
+        draggable: true,
+    })
+}
 
   // Pegar detalhes do pokemon
   const getPokemonDetails = () => {
@@ -63,7 +85,7 @@ const GlobalState = (props) => {
         }
         const pokedexCopy = [...pokedex, newPoke]
         setPokedex(pokedexCopy)
-        alert("Pokemon adicionado a pokedex")
+        alertSuccess("Pokémon adicionado a pokedex")
     }
 }
 
@@ -71,13 +93,14 @@ const GlobalState = (props) => {
   const deltest = (index) => {
     if(window.confirm("deseja mesmo deletar?")) {
         pokedex.splice(index, 1)
+        alertSuccess("Pokémon removido da pokedex")
     }
     getPokemonDetails()
   }
 
   // Adicionar mais Pokemons a home
   const verMaisPokemons = () => {
-    setQtdPokemons(qtdPokemons + 20)
+    setQtdPokemons(qtdPokemons + 25)
     getPokemonNames()
   }
 
@@ -97,7 +120,9 @@ const GlobalState = (props) => {
     // Funções
     deltest,
     addParaPokedex,
-    verMaisPokemons
+    verMaisPokemons,
+    alertSuccess,
+    alertError
   };
 
   return <GlobalStateContext.Provider value={data}>
