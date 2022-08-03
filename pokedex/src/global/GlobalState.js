@@ -13,6 +13,8 @@ const GlobalState = (props) => {
   useEffect(() => {getPokemonNames()}, [qtdPokemons]);
   useEffect(() => {getPokemonDetails()}, [pokemonNames]);
 
+
+  
   // Função para setar alert 
   const alertSuccess = (message) => {
     toast.success(`${message}`, {
@@ -64,7 +66,7 @@ const alertError = (message) => {
         console.log(error.message)
       })
   }
-
+ 
   // Adicionar pokemon a pokedex
   const addParaPokedex = (id,image, name) => {
     const index = pokedex.findIndex((inPokedex) => {
@@ -116,6 +118,7 @@ const alertError = (message) => {
     // Requisições
     getPokemonDetails,
     getPokemonNames,
+ 
 
     // Funções
     deltest,
