@@ -6,33 +6,153 @@ div .container-details {
     align-items: center;
     width: 100%;
 }
+/*Estilização splash Pokemon*/
+div .pokemon-splash img {
+    width: 150px;
+    height: 150px;
+}
+
+/*Estilização container Pokemon*/
+div .container-pokemon {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(247, 247, 247);
+    border-radius: 15px;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    box-shadow: 0 0 1px 1px rgb(232, 232, 233);
+}
 
 /*Estilização pokemon types*/
 div .pokemon-type {
     display: flex;
     gap: 10px;
-    justify-content: start;
-    width: 300px;
 }
 /*Estilização pokemon infos*/
 div .pokemon-infos {
     display: flex;
-    align-items: start;
-    gap: 40px;
-    justify-content: start;
+    gap: 50px;
+    justify-content: center;
     width: 300px;
-    
+    margin-bottom: 20px;
+}
+div .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+div .pokemon-infos p {
+    color: #7a7d80;
+    font-weight: 100;
+}
 /*Estilização barra de progresso*/
 div .progress {
     display: flex;
-    width: 300px;
+    width: 320px;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
 }
 
+/*Estilização tipo dos pokemons*/
+div #type-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 25px;
+    font-size: 14px;
+    border-radius: 5px;
+}
 
+div .normal {
+    background-color: rgba(109, 109, 78, 0.1);
+    color: rgb(109, 109, 78);
+}
 
+div .fire {
+    background-color: rgba(233, 99, 3, 0.1);
+    color: rgb(233, 99, 3);
+}
 
+div .water {
+    background-color: rgba(79, 119, 190, 0.1);
+    color: rgb(79, 119, 190);  
+}
+
+div .electric {
+    background-color: rgba(245, 209, 5, 0.1);
+    color: rgb(212, 188, 52);
+}
+
+div .grass {
+    background-color: rgba(115, 184, 97, 0.1);
+    color: rgb(115, 184, 97);  
+}
+
+div .ice {
+    background-color: rgba(113, 186, 171, 0.1);
+    color: rgb(113, 186, 171);  
+}
+
+div .ground {
+    background-color: rgba(206, 128, 86, 0.1);
+    color: rgb(206, 128, 86);   
+}
+
+div .flying {
+    background-color: rgba(117, 140, 189, 0.1);
+    color: rgb(117, 140, 189);
+}
+
+div .ghost {
+    background-color: rgba(97, 110, 183, 0.1);
+    color: rgb(97, 110, 183);  
+}
+
+div .rock {
+    background-color: rgba(132, 190, 179, 0.1);
+    color: rgb(132, 190, 179); 
+}
+
+div .fighting {
+    background-color: rgba(196, 79, 99, 0.24);
+    color: rgb(196, 77, 97);
+}
+
+div .poison {
+    color: rgb(172, 106, 202);
+    background-color: rgba(172, 106, 202, 0.1);   
+}
+
+div .psychic {
+    background-color: rgba(235, 139, 132, 0.1);
+    color: rgb(235, 139, 133);
+}
+
+div .bug {
+    background-color: rgba(155, 186, 72, 0.1);
+    color: rgb(155, 186, 72);
+     
+  }
+div .dark {
+    background-color: rgba(89, 87, 97, 0.1);
+    color: rgb(89, 87, 97); 
+}
+  
+div .steel {
+    background-color: rgba(101, 148, 161, 0.1);
+    color: rgb(101, 148, 161);
+}
+
+div .dragon {
+    background-color: rgba(44, 106, 193, 0.1);
+    color: rgb(44, 106, 193);
+}
+
+div .fairy {
+    background-color: rgba(226, 150, 225, 0.1);
+    color: rgb(226, 150, 225);  
+}
