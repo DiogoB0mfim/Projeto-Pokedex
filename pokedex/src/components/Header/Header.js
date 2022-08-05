@@ -3,7 +3,7 @@ import pokelogo from "../../assets/pokelogo.png"
 import github from "../../assets/github.png"
 import { useState } from "react"
 
-const Header = () => {
+const Header = ({scrollOrNavBack}) => {
     const [menuScroll, setMenuScroll] = useState("fixed")
 
     document.addEventListener("scroll", function() {
@@ -16,13 +16,9 @@ const Header = () => {
         } 
     })
     
-    const scrollTop = () => {
-        window.scrollTo(0, 0)
-    }
- 
     return (
         <div className={menuScroll}>
-            <img src={pokelogo} onClick={() => scrollTop()}/>
+            <img src={pokelogo} onClick={scrollOrNavBack}/>
             <h3>Pokédex</h3>
             <div className="social-midia">
                 <a href="https://github.com/DiogoB0mfim" target='blank'><img src={github}/></a>

@@ -4,6 +4,8 @@ import axios from "axios"
 import { BASE_URL } from '../../constants/url';
 // Estilos
 import "./styles.css"
+import Header from "../../components/Header/Header"
+import pokebola from "../../assets/pokebola.png"
 
 const PokemonDetails = () => {
     const navigate = useNavigate()
@@ -12,7 +14,6 @@ const PokemonDetails = () => {
 
     useEffect(() => {selectedPokemonDetails()} ,[])
     
-    console.log(selectedPokemon)
     const selectedPokemonDetails = () => {
         axios
             .get(`${BASE_URL}/pokemon/${name}`)
@@ -48,13 +49,13 @@ const PokemonDetails = () => {
         navigate(param)
     }
 
-    return (
-        <div>
-            <h1>Detalhes do pokemon</h1>
-            <button onClick={() => deleteLocalPokemon("/")}>Voltar para lista de pokemons</button>
-            <button onClick={() => deleteLocalPokemon("/pokedex")}>Voltar para a pokedex</button>
-            
-            <div className='container-details'>
+    return (    
+        <div className='container-details'>
+            <Header scrollOrNavBack={() => navigate("/")}/>
+            <div className='pokebola-pokedex'>
+                <img src={pokebola} onClick={() => deleteLocalPokemon("/pokedex")}/>
+            </div>
+            <div>
                 <div className="container-pokemon">
                     <div className='pokemon-splash'>
                         {selectedPokemon && selectedPokemon.sprites && (
@@ -74,7 +75,6 @@ const PokemonDetails = () => {
                             {selectedPokemon.height / 10}m
                         </div>
                         
-
                         <div className="info">
                             <p>Weight</p>
                             {selectedPokemon.weight / 10}kg
@@ -87,14 +87,6 @@ const PokemonDetails = () => {
                     </div>
                     {renderPokemonStats}
                 </div>
-
-                
-                
-                
-                
-                
-                
-               
             </div>
         </div>
     )

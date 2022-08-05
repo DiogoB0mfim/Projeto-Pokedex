@@ -83,3 +83,18 @@ div .show-more img {
     margin-bottom: 20px;
 }
 
+/*Estilização pokedex vazia*/
+div .pokedex-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+div .pokedex-empty p{
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+}
