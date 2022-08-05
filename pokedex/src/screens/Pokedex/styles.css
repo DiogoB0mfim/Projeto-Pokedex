@@ -1,0 +1,56 @@
+/*Estilização Container Geral pokedex*/
+div .container-pokedex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+/* Estilização container e card de pokemons*/
+div .each-pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(236, 235, 235);
+    box-shadow: 0 0 1px 1px rgb(232, 232, 233);
+    padding: 10px;
+    border-radius: 15px;
+    width: 240px;
+    height: 290px;
+}
+
+div .each-pokemon img{
+    width: 150px;
+    height: 150px;
+    transition: 0.5s;
+}
+
+div .pokemon-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: center;
+    width: 88%;
+    margin-top: 60px; 
+}
+
+div .btn-pokedex {
+    display: flex;
+    gap: 10px;
+    height: 50px;
+}
+
+/*Estilização botão back top*/
+div .btn-scrollTop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+div .btn-scrollTop img{
+    width: 50px;
+}

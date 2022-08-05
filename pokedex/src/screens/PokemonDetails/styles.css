@@ -5,6 +5,7 @@ div .container-details {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100vh;
 }
 /*Estilização splash Pokemon*/
 div .pokemon-splash img {
@@ -20,8 +21,43 @@ div .container-pokemon {
     border-radius: 15px;
     justify-content: center;
     padding: 10px;
+    width: 100%;
     align-items: center;
     box-shadow: 0 0 1px 1px rgb(232, 232, 233);
+}
+
+/*Estilização do container Pokemon para celulares */
+@media (max-width: 600px) {
+    div .container-pokemon {
+        display: flex;
+        flex-direction: column;
+        background-color: #ffff;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+        width: 90%;
+        padding: 20px;
+        border-radius: 0;
+    }
+    
+    div .pokebola-pokedex img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50px;
+        margin-top: 135px;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+    div .container-details {
+        margin-top: 100px;
+        height: 90vh;
+    }
+
+    div .info-footer {
+        display: none;
+    }
 }
 
 /*Estilização pokemon types*/
@@ -34,7 +70,6 @@ div .pokemon-infos {
     display: flex;
     gap: 50px;
     justify-content: center;
-    width: 300px;
     margin-bottom: 20px;
 }
 div .info {
@@ -156,3 +191,15 @@ div .fairy {
     background-color: rgba(226, 150, 225, 0.1);
     color: rgb(226, 150, 225);  
 }
+
+/*Estilização da pokebola*/ 
+div .pokebola-pokedex img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    margin-top: 160px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+

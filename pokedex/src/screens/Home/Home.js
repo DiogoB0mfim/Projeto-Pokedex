@@ -33,8 +33,10 @@ const  Home = () => {
         setSearch(event.target.value)
     }
 
+    const scrollTop = () => {
+        window.scrollTo(0, 0)
+    }
 
-    
     const render = pokemons && pokemons.map((pokemon, index) => {
         let typesPoke = []
         pokemon.types.map((type) => {typesPoke.push(type.type.name)})
@@ -45,7 +47,7 @@ const  Home = () => {
                     {isPokemonInPokedex(pokemon.id) ? 
                         <div className='greyPoke'><img onClick={() => isPokemonInPokedexTrue()} src={pokemon.sprites.other['official-artwork'].front_default} alt="pokemon de frente"/></div>
                         : 
-                        <div className='normalPoke'><img onClick={() => addParaPokedex(pokemon.id, pokemon.sprites.other['official-artwork'].front_default, pokemon.name)} 
+                        <div className='normalPoke'><img onClick={() => addParaPokedex(pokemon.id, pokemon.sprites.other['official-artwork'].front_default, pokemon.name, pokemon.types)} 
                         src={pokemon.sprites.other['official-artwork'].front_default} alt="pokemon de frente"/></div>
                     } 
                     
@@ -64,7 +66,7 @@ const  Home = () => {
                             {isPokemonInPokedex(pokemon.id) ? 
                                 <div className='greyPoke'><img onClick={() => isPokemonInPokedexTrue()} src={pokemon.sprites.other['official-artwork'].front_default} alt="pokemon de frente"/></div>
                                 : 
-                                <div className='normalPoke'><img onClick={() => addParaPokedex(pokemon.id, pokemon.sprites.other['official-artwork'].front_default, pokemon.name)} 
+                                <div className='normalPoke'><img onClick={() => addParaPokedex(pokemon.id, pokemon.sprites.other['official-artwork'].front_default, pokemon.name, pokemon.types)} 
                                 src={pokemon.sprites.other['official-artwork'].front_default} alt="pokemon de frente"/></div>
                             } 
                             <p>{pokemon.name[0].toUpperCase() + pokemon.name.substring(1)}</p>
@@ -77,10 +79,9 @@ const  Home = () => {
         }
     })
 
-
     return (
-        <div id="test" className="container-home">          
-            <Header/>
+        <div className="container-home">          
+            <Header scrollOrNavBack={scrollTop}/>
             <TextField 
             value={search}
             onChange={onChangeSearch}
@@ -101,7 +102,6 @@ const  Home = () => {
             }
         
             </div>
-        
             <div className="container-pokemons">
                 {render}
             </div>
