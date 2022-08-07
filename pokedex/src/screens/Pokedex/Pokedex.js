@@ -28,7 +28,7 @@ const PokedexDetail = () => {
         typesPoke.map((type, index) => {<div key={index}><p>{type}</p></div>})
 
         return  <div className="each-pokemon" key={index}>
-                    <img src={pokemon.image}/>
+                    <img src={pokemon.image} alt="imagem pokemon"/>
                     <p>{pokemon.name[0].toUpperCase() + pokemon.name.substring(1)}</p>
                     <div id="card-types" key={index}>
                                 {typesPoke.map((type) => {return <div key={type} className={type} id="type-bar"><p>{type[0].toUpperCase() + type.substring(1)}</p></div>})}
@@ -48,7 +48,7 @@ const PokedexDetail = () => {
             {pokedex.length < 1 ? <div className="pokedex-empty"><p>Você não possui pokémons 😪</p></div> : renderPokedex}
             </div>
             <div className='btn-scrollTop'>
-                <img src={setaCima} onClick={() => scrollTop()}/>
+                <img src={setaCima} onClick={() => scrollTop()} alt="seta para cima"/>
             </div>
         </div>
     )

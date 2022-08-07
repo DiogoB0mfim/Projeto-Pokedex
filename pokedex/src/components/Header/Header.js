@@ -18,10 +18,10 @@ const Header = ({scrollOrNavBack}) => {
     
     return (
         <div className={menuScroll}>
-            <img src={pokelogo} onClick={scrollOrNavBack}/>
+            <img src={pokelogo} onClick={scrollOrNavBack} alt="logo pokemon"/>
             <h3>Pokédex</h3>
             <div className="social-midia">
-                <a href="https://github.com/DiogoB0mfim" target='blank'><img src={github}/></a>
+                <a href="https://github.com/DiogoB0mfim" target='blank'><img src={github} alt="icone github"/></a>
             </div>
         </div>
     )
