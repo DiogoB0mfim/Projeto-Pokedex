@@ -53,7 +53,7 @@ const PokemonDetails = () => {
         <div className='container-details'>
             <Header scrollOrNavBack={() => navigate("/")}/>
             <div className='pokebola-pokedex'>
-                <img src={pokebola} onClick={() => deleteLocalPokemon("/pokedex")}/>
+                <img src={pokebola} onClick={() => deleteLocalPokemon("/pokedex")} alt="imagem pokebola"/>
             </div>
             <div>
                 <div className="container-pokemon">

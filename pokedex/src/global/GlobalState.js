@@ -16,7 +16,7 @@ const GlobalState = (props) => {
   // Função para setar alert 
   const alertSuccess = (message) => {
     toast.success(`${message}`, {
-        position: "top-right",
+        position: "bottom-center",
         className: "success-alert",
         autoClose: 2000,
         closeOnClick: true,
@@ -26,7 +26,7 @@ const GlobalState = (props) => {
 
 const alertError = (message) => {
     toast.error(`${message}`, {
-        position: "top-right",
+        position: "bottom-center",
         className: "error-alert",
         autoClose: 2000,
         closeOnClick: true,
