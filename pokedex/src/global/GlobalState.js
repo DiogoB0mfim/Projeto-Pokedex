@@ -92,10 +92,9 @@ const alertError = (message) => {
 
   // Apagar pokemon da pokedex
   const deltest = (index) => {
-    if(window.confirm("deseja mesmo deletar?")) {
-        pokedex.splice(index, 1)
-        alertSuccess("Pokémon removido da pokedex")
-    }
+    pokedex.splice(index, 1)
+    alertSuccess("Pokémon removido da pokedex")
+    
     getPokemonDetails()
   }
 
