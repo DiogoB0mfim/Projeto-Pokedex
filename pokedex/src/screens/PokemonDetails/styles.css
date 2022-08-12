@@ -75,6 +75,13 @@ div .container-pokemon {
     }
 }
 
+/*Estilização do container Pokemon para notebooks */
+@media (max-height: 900px) and (min-width: 601px) {
+    div .container-pokemon {
+        margin-top: 100px;
+    }
+}
+
 /*Estilização pokemon types*/
 div .pokemon-type {
     display: flex;
