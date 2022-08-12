@@ -4,9 +4,9 @@
 <br></br>
 <h2 align="center">Sobre</h2>
 <p align="justify"> O projeto pokédex foi feito com o intuito de simular um site com mais de 1000 pokémons extraidos da <a href="https://pokeapi.co/" target="blank" >PokéAPI</a> e com diversas funcionalidades, como por exemplo adicionar ou excluir um pokémon da sua pokédex e até ver seus detalhes. Todo desenvolvimento desse site foi de grande aprendizado para mim e reforçou ainda mais meus conhecimentos e React.JS, Axios entre outros.</p>
-<br></br>
 
-<h2><a href="https://pokedex-project-one.vercel.app/" target="blank">🔗 Deploy (Vercel)</a></h2>
+
+<h3><a href="https://pokedex-project-one.vercel.app/" target="blank">🔗 Deploy (Vercel)</a></h3>
 
 <h2>⚙ Tecnologias utlizadas</h2>
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
@@ -24,3 +24,4 @@
 <img width="300" src="pokedex/src/assets/mobile.gif">
 
 <h2>💻 Outros dispositivos<h2>
+<img width="300" src="pokedex/src/assets/desktop.gif">
