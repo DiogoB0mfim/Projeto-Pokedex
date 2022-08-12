@@ -21,3 +21,6 @@
 <p>• 💻 Outros dispositivos ✔</p>
 
 <h2>📱 Responsividade Mobile<h2>
+<img width="300" src="pokedex/src/assets/mobile.gif">
+
+<h2>💻 Outros dispositivos<h2>
