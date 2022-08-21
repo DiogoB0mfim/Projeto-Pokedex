@@ -3,7 +3,7 @@
 </div>
 <br></br>
 <h2 align="center">Sobre</h2>
-<p align="justify"> O projeto pokédex foi feito com o intuito de simular um site com mais de 1000 pokémons extraidos da <a href="https://pokeapi.co/" target="blank" >PokéAPI</a> e com diversas funcionalidades, como por exemplo adicionar ou excluir um pokémon da sua pokédex e até ver seus detalhes. Todo desenvolvimento desse site foi de grande aprendizado para mim e reforçou ainda mais meus conhecimentos e React.JS, Axios entre outros.</p>
+<p align="justify"> O projeto pokédex foi feito com o intuito de simular um site com mais de 1000 pokémons extraidos da <a href="https://pokeapi.co/" target="blank" >PokéAPI</a> e com diversas funcionalidades, como por exemplo adicionar ou excluir um pokémon da sua pokédex e até ver seus detalhes. Todo desenvolvimento desse site foi de grande aprendizado para mim e reforçou ainda mais meus conhecimentos em React.JS, Axios entre outros.</p>
 
 
 <h3><a href="https://pokedex-project-one.vercel.app/" target="blank">🔗 Deploy (Vercel)</a></h3>
